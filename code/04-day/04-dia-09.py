@@ -1,5 +1,5 @@
 # Herencia, continuación
-# Jerarquía de clases
+# Jerarquía de clases ejemplo
 
 # Ej.1
 class One:
