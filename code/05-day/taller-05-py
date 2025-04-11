@@ -1,0 +1,23 @@
+
+def saludar(self):
+        if self.edad >= 18:
+            return f"Mi nombre es {self.nombre}, tengo {self.edad} y soy mayor de edad"
+        return f"Mi nombre es {self.nombre}, tengo {self.edad} y soy menor de edad"
+
+
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+ 
+    def saludar(self):
+        mm=""
+        if self.edad>16:
+            mm="Mayor de edad"
+        else:
+            mm="Menor de edad"
+       
+       
+        return f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años. Soy {mm}"
+    
+
