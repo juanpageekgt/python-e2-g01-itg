@@ -7,19 +7,26 @@ class Persona:
         self.edad = edad
 
     def saludar(self):
-        return f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años."
+        mensaje = "mayor de edad" if self.edad >= 18 else "menor de edad"
+        return f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años. Suy {mensaje}"
 
 # Tema 2: Propiedades y Métodos Privados
 class CuentaBancaria:
-    def __init__(self, titular, saldo):
+    def __init__(self, titular, saldo, contrasena):
+        if saldo < 0:
+            raise ValueError('El saldo inicial no puede ser negativo.')
         self.__titular = titular  # Atributo privado
         self.__saldo = saldo  # Atributo privado
+        self.__contrasena = contrasena # Atributo privado
 
     def depositar(self, monto):
         self.__saldo += monto
 
-    def consultar_saldo(self):
-        return f"Saldo actual: {self.__saldo}"
+    def consultar_saldo(self, contrasena):
+        if contrasena == self.__contrasena:
+            return f"Saldo actual: {self.__saldo}"
+        else:
+            return f"Password incorrecto. No se puede consultar el saldo."
 
 # Tema 3: Constructores
 # Ya manejamos constructores con el método __init__

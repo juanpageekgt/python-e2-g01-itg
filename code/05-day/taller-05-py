@@ -21,3 +21,40 @@ class Persona:
         return f"Hola, mi nombre es {self.nombre} y tengo {self.edad} años. Soy {mm}"
     
 
+print('----------------------')
+
+class CuentaBancaria:
+    def __init__(self, titular, saldo, contraseña):
+        self.__titular = titular  # Atributo privado
+        self.__saldo = saldo  # Atributo privado
+        self.__contraseña = "password"
+       
+ 
+    def depositar(self, monto):
+        self.__saldo += monto
+ 
+    def consultar_saldo(self,clave):
+        # self.clave2=clave
+        if self.clave == self.__contraseña:
+          return f"Saldo actual: {self.__saldo}"
+        else:
+         return f"Password incorrecto, no se puede consultar el saldo"
+
+print('------------------')
+
+def __init__(self, titular, saldo, contrasena):
+    self.__titular = titular  # Atributo privado
+    if saldo < 0:
+        raise ValueError("El saldo proporcionado no puede ser negativo!")
+    else:
+        self.__saldo = saldo  # Atributo privado
+    self.__contrasena = contrasena # Atributo privado
+
+
+    if saldo < 0:
+        raise ValueError("El saldo proporcionado no puede ser negativo!")
+    self.__titular = titular  # Atributo privado 
+    self.__saldo = saldo  # Atributo privado
+    self.__contrasena = contrasena # Atributo privado
+    
+ 
