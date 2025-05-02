@@ -56,3 +56,21 @@ d = date(2025, 5, 2)
 print(d.weekday() + 1)
 
 print()
+
+print('Ej.7')
+
+d = date(2025, 5, 2)
+print(d.isoweekday())
+
+print()
+
+print('ej.8')
+from datetime import time
+
+t = time(14, 53, 20, 1)
+
+print('Tiempo:', t)
+print('Hora:', t.hour)
+print('Minutos:', t.minute)
+print('Segundos:', t.second)
+print('Microsegundos:', t.microsecond)
